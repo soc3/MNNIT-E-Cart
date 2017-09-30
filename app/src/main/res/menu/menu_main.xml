@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.sushantoberoi.cart.ChangePassword">
+    <item
+        android:id="@+id/notify"
+        android:orderInCategory="100"
+        android:title="Enable Notifications"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/changePassword"
+        android:orderInCategory="100"
+        android:title="Change Password"
+        app:showAsAction="never" />
+</menu>

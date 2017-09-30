@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- The main content view -->
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.abhinavdixit.firebase_test.HomeActivity">
+    <android.support.v7.widget.SearchView
+        android:layout_width="290dp"
+        android:layout_height="50dp"
+        android:id="@+id/searchView"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" />
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/speak"
+        android:layout_marginLeft="40dp"
+        android:id="@+id/btnspeak"
+        android:layout_toRightOf="@+id/searchView"/>
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/hor_view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/searchView">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/authors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/rounded_corners"
+                android:text="Authors"
+                android:textStyle="italic"
+                />
+            <Button
+                android:id="@+id/books"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/rounded_corners"
+                android:text="Books"
+                android:textStyle="italic"
+                />
+            <Button
+                android:id="@+id/favourites"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/rounded_corners"
+                android:text="Favourites"
+                android:textStyle="italic"/>
+            <Button
+                android:id="@+id/favourites2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/rounded_corners"
+                android:text="Favourites"
+                android:textStyle="italic"
+                />
+            <Button
+                android:id="@+id/favourites3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/rounded_corners"
+                android:text="Favourites"
+                android:textStyle="italic"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/loginSignup"
+        android:layout_below="@+id/hor_view"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/loginSignup"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerView">
+    </android.support.v7.widget.RecyclerView>
+</RelativeLayout>
+    <!-- The navigation drawer
+    <ListView android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:background="#111"/> -->
+</android.support.v4.widget.DrawerLayout>
