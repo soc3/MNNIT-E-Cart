@@ -1,11 +1,9 @@
-# firebase-chat
-One to one chat implementation using firebase.
+#   MNNIT-E-Cart
+This project is an e-commerce app developed for our college MNNIT.In this app users can upload the items they want to sell and other users can buy them.This app also requires a server which will store the user data, product data and other things.This is done with the help of FIREBASE.
 
-[Tutorial link](http://www.crazyhitty.com/one-to-one-chat-using-firebase-for-android/)
+
 
 # Screenshots
-
-<img src="https://github.com/crazyhitty/firebase-chat/raw/master/screenshots/splash.png" alt="alt text" width="400"> <img src="https://github.com/crazyhitty/firebase-chat/raw/master/screenshots/login.png" alt="alt text" width="400">
 
 <img src="https://github.com/crazyhitty/firebase-chat/raw/master/screenshots/users.png" alt="alt text" width="400"> <img src="https://github.com/crazyhitty/firebase-chat/raw/master/screenshots/chat.png" alt="alt text" width="400">
 
