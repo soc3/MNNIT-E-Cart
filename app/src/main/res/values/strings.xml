@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">FirebaseChat</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">MNNIT Cart</string>
     <string name="email">Email Id</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
@@ -45,6 +44,15 @@
     <!-- sushant items home page-->
     <string name="drawer_open">"drawer open"</string>
     <string name="drawer_close">"drawer close"</string>
+    <string name="bookName">Book Name</string>
+    <string name="description">Description</string>
+    <string name="priceOfBook">Price Of Book</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <!--
+        This is the name that users will see when interacting with this channel.
+        It should describe the category of notifications that will be sent through this channel
+     -->
+    <string name="default_notification_channel_name" translatable="true">News</string>
     <string-array name="decriptions">
         <item>"book1"</item>
         <item>"book2"</item>
@@ -52,4 +60,28 @@
         <item>"book4"</item>
         <item>"book5"</item>
     </string-array>
+
+    <string name="tab1">CALLS</string>
+    <string name="tab2">CHATS</string>
+    <string name="tab3">CONTACTS</string>
+    <string name="action_search">Search</string>
+    <string name="action_chat">Chat</string>
+    <string name="action_new_group">New Group</string>
+    <string name="action_new_broadcast">New broadcast</string>
+    <string name="action_whatsapp_web">WhatsApp Web</string>
+    <string name="action_starred_messages">Starred messages</string>
+    <string name="action_status">Status</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_clear_call_log">Clear call log</string>
+    <string name="action_calls">Calls</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_contacts">Contacts</string>
+    <string name="action_without_icon">Without Icon</string>
+    <string name="action_with_icon">With Icon</string>
+    <string name="action_custom">Custom Tab</string>
+    <string name="title_activity_navigation_drawer">NavigationDrawer</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_remove_name">RemoveName</string>
 </resources>

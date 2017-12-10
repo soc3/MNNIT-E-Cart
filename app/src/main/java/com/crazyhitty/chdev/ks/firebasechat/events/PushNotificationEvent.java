@@ -1,10 +1,6 @@
 package com.crazyhitty.chdev.ks.firebasechat.events;
 
-/**
- * Author: Kartik Sharma
- * Created on: 10/18/2016 , 10:16 PM
- * Project: FirebaseChat
- */
+
 
 public class PushNotificationEvent {
     private String title;

@@ -15,8 +15,8 @@ import android.widget.Toast;
 import com.crazyhitty.chdev.ks.firebasechat.R;
 import com.crazyhitty.chdev.ks.firebasechat.core.login.LoginContract;
 import com.crazyhitty.chdev.ks.firebasechat.core.login.LoginPresenter;
+import com.crazyhitty.chdev.ks.firebasechat.ui.NavigationDrawer;
 import com.crazyhitty.chdev.ks.firebasechat.ui.activities.RegisterActivity;
-import com.crazyhitty.chdev.ks.firebasechat.ui.activities.UserListingActivity;
 
 /**
  * Author: Kartik Sharma
@@ -109,7 +109,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener, Log
     public void onLoginSuccess(String message) {
         mProgressDialog.dismiss();
         Toast.makeText(getActivity(), "Logged in successfully", Toast.LENGTH_SHORT).show();
-        UserListingActivity.startActivity(getActivity(),
+        NavigationDrawer.startActivity(getActivity(),
                 Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
     }
 

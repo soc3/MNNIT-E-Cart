@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.crazyhitty.chdev.ks.firebasechat.ui.activities.SingleBookDisplayActivity;
+
 import java.util.ArrayList;
 
 /**
@@ -36,8 +38,9 @@ public class ItemLayoutAdapter extends RecyclerView.Adapter<ItemLayoutAdapter.It
             }
         });*/
         ItemLayout ITEM = itemLayouts.get(position);
-        holder.item_image.setImageResource(ITEM.getImage_id());
+
         holder.description.setText(ITEM.getDescription());
+        holder.item_image.setImageResource(ITEM.getImage_id());
     }
 
     @Override
@@ -48,13 +51,18 @@ public class ItemLayoutAdapter extends RecyclerView.Adapter<ItemLayoutAdapter.It
         ImageView item_image;
         TextView description;
         static int itemPosition;
-        public ItemLayoutViewHolder(View itemView) {
+        public ItemLayoutViewHolder(final View itemView) {
             super(itemView);
+
+
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent i = new Intent(view.getContext(), BookDescription.class);
-                    i.putExtra("itemPosition", ItemLayoutViewHolder.itemPosition);
+                    int pos=getAdapterPosition();
+                    Intent i = new Intent(view.getContext(), SingleBookDisplayActivity.class);
+                    i.putExtra("itemPosition", pos);
+
+
                     view.getContext().startActivity(i);
                 }
             });

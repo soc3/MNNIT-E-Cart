@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context="com.crazyhitty.chdev.ks.firebasechat.ui.activities.SingleBookDisplayActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_marginTop="20dp"
+        android:scrollbarSize="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="50" />
+
+    <ImageView
+        android:id="@+id/imageViewBook"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        android:background="#cfcaca" />
+    <!--  <RatingBar
+         android:id="@+id/ratingBar"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:numStars="5"
+         android:stepSize="1.0"
+         android:layout_weight="0.005" /> -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:background="#cfcaca"
+        android:text="About This Item"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="10dp"
+        android:layout_weight="50">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button3"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0.005"
+        android:onClick="rateMe"
+        android:textColor="#ffffff"
+        android:background="#1d83e9"
+        android:text="CHAT WITH OWNER" />
+
+
+</LinearLayout>

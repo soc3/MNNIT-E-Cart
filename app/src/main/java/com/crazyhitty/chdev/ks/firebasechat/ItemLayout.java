@@ -28,4 +28,6 @@ public class ItemLayout {
     public void setImage_id(int image_id) {
         this.image_id = image_id;
     }
+
+    public int getPosition(){return 0;}
 }

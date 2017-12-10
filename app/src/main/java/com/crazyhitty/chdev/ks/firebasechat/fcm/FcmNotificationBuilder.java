@@ -15,16 +15,12 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-/**
- * Author: Kartik Sharma
- * Created on: 10/16/2016 , 1:53 PM
- * Project: FirebaseChat
- */
+
 
 public class FcmNotificationBuilder {
     public static final MediaType MEDIA_TYPE_JSON = MediaType.parse("application/json; charset=utf-8");
     private static final String TAG = "FcmNotificationBuilder";
-    private static final String SERVER_API_KEY = "YOUR_SERVER_API_KEY";
+    private static final String SERVER_API_KEY = "AAAAt5GBvQE:APA91bHaQ0Y1d4JocdNw2glP9TVzAYeskTMo56_HMHP4GCi3FGcNTLkEfycRQOo-L-xtCLw-YGs92a0BQxXpegVpPV3fUcZzbUyRNCbW6dgOC1RtuU1NBaj5vRy7Ka-5KsZAqQ2wqx-i";
     private static final String CONTENT_TYPE = "Content-Type";
     private static final String APPLICATION_JSON = "application/json";
     private static final String AUTHORIZATION = "Authorization";

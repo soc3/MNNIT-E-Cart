@@ -1,98 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <!-- The main content view -->
-<RelativeLayout
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.abhinavdixit.firebase_test.HomeActivity">
-    <android.support.v7.widget.SearchView
-        android:layout_width="290dp"
-        android:layout_height="50dp"
-        android:id="@+id/searchView"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp" />
-    <ImageButton
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:background="@drawable/speak"
-        android:layout_marginLeft="40dp"
-        android:id="@+id/btnspeak"
-        android:layout_toRightOf="@+id/searchView"/>
-    <HorizontalScrollView
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:id="@+id/hor_view"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="25dp"
-        android:layout_below="@+id/searchView">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <Button
-                android:id="@+id/authors"
+        android:layout_height="match_parent"
+        android:background="@drawable/black"
+        tools:context="com.example.abhinavdixit.firebase_test.HomeActivity">
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="270dp"
+            android:layout_height="50dp"
+           />
+
+        <ImageButton
+            android:id="@+id/searchItem"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+
+            android:layout_toRightOf="@+id/autoCompleteTextView"
+            android:background="@drawable/search" />
+
+        <ImageButton
+            android:id="@+id/btnspeak"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/mike"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+        <HorizontalScrollView
+            android:id="@+id/hor_view"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/autoCompleteTextView"
+            android:layout_marginTop="25dp">
+
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:background="@drawable/rounded_corners"
-                android:text="Authors"
-                android:textStyle="italic"
-                />
-            <Button
-                android:id="@+id/books"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:background="@drawable/rounded_corners"
-                android:text="Books"
-                android:textStyle="italic"
-                />
-            <Button
-                android:id="@+id/favourites"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:background="@drawable/rounded_corners"
-                android:text="Favourites"
-                android:textStyle="italic"/>
-            <Button
-                android:id="@+id/favourites2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:background="@drawable/rounded_corners"
-                android:text="Favourites"
-                android:textStyle="italic"
-                />
-            <Button
-                android:id="@+id/favourites3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:background="@drawable/rounded_corners"
-                android:text="Favourites"
-                android:textStyle="italic"/>
-        </LinearLayout>
-    </HorizontalScrollView>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:id="@+id/loginSignup"
-        android:layout_below="@+id/hor_view"/>
-    <android.support.v7.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_below="@+id/loginSignup"
-        android:layout_height="wrap_content"
-        android:id="@+id/recyclerView">
-    </android.support.v7.widget.RecyclerView>
-</RelativeLayout>
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/book_names"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/rounded_corners"
+                    android:text="Names"
+                    android:textStyle="italic" />
+
+                <Button
+                    android:id="@+id/book_authors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:background="@drawable/rounded_corners"
+                    android:text="Authors"
+                    android:textStyle="italic" />
+
+                <Button
+                    android:id="@+id/book_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:background="@drawable/rounded_corners"
+                    android:text="Price"
+                    android:textStyle="italic" />
+                <Button
+                    android:id="@+id/book_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:background="@drawable/rounded_corners"
+                    android:text="Category"
+                    android:textStyle="italic" />
+
+                <Button
+                    android:id="@+id/favourites"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:background="@drawable/rounded_corners"
+                    android:text="Favourites"
+                    android:textStyle="italic" />
+                <Button
+                    android:id="@+id/book_condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:background="@drawable/rounded_corners"
+                    android:text="Condition"
+                    android:textStyle="italic" />
+
+
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/loginSignup"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/hor_view" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back"
+            android:layout_below="@+id/loginSignup"
+            android:layout_alignParentStart="true"></android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
     <!-- The navigation drawer
     <ListView android:id="@+id/left_drawer"
         android:layout_width="240dp"

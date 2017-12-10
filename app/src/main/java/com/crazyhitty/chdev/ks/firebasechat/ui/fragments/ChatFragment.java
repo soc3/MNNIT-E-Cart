@@ -28,11 +28,7 @@ import org.greenrobot.eventbus.Subscribe;
 
 import java.util.ArrayList;
 
-/**
- * Author: Kartik Sharma
- * Created on: 8/28/2016 , 10:36 AM
- * Project: FirebaseChat
- */
+
 
 public class ChatFragment extends Fragment implements ChatContract.View, TextView.OnEditorActionListener {
     private RecyclerView mRecyclerViewChat;
@@ -116,6 +112,9 @@ public class ChatFragment extends Fragment implements ChatContract.View, TextVie
         String sender = FirebaseAuth.getInstance().getCurrentUser().getEmail();
         String senderUid = FirebaseAuth.getInstance().getCurrentUser().getUid();
         String receiverFirebaseToken = getArguments().getString(Constants.ARG_FIREBASE_TOKEN);
+
+
+
         Chat chat = new Chat(sender,
                 receiver,
                 senderUid,

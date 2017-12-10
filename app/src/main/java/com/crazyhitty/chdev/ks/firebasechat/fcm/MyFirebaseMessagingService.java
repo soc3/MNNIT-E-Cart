@@ -45,6 +45,10 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             String uid = remoteMessage.getData().get("uid");
             String fcmToken = remoteMessage.getData().get("fcm_token");
 
+            for(int i=0;i<100;i++)
+                System.out.println("Messgae Received");
+
+
             // Don't show notification if chat activity is open.
             if (!FirebaseChatMainApp.isChatActivityOpen()) {
                 sendNotification(title,
@@ -53,6 +57,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                         uid,
                         fcmToken);
             } else {
+
                 EventBus.getDefault().post(new PushNotificationEvent(title,
                         message,
                         username,
@@ -86,6 +91,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 .setAutoCancel(true)
                 .setSound(defaultSoundUri)
                 .setContentIntent(pendingIntent);
+        for(int i=0;i<100;i++)
+            System.out.println("notification sent");
 
         NotificationManager notificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);

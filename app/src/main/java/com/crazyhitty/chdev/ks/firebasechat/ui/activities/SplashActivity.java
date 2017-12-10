@@ -5,7 +5,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
 import com.crazyhitty.chdev.ks.firebasechat.R;
-import com.crazyhitty.chdev.ks.firebasechat.ReferenceActivity;
+import com.crazyhitty.chdev.ks.firebasechat.ui.NavigationDrawer;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class SplashActivity extends AppCompatActivity {
@@ -26,7 +26,7 @@ public class SplashActivity extends AppCompatActivity {
                 // check if user is already logged in or not
                 if (FirebaseAuth.getInstance().getCurrentUser() != null) {
                     // if logged in redirect the user to user listing activity
-                    ReferenceActivity.startActivity(SplashActivity.this);
+                    NavigationDrawer.startActivity(SplashActivity.this);
                 } else {
                     // otherwise redirect the user to login activity
                     LoginActivity.startIntent(SplashActivity.this);

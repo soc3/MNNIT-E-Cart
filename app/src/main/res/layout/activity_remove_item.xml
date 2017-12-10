@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/black"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.crazyhitty.chdev.ks.firebasechat.RemoveItem">
+
+<AutoCompleteTextView
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:hint="Item type"
+    android:id="@+id/ac_1"
+
+    />
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Item name"
+        android:id="@+id/auto_name"
+        android:background="#FFFFFF"
+        android:layout_below="@+id/ac_1"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="210dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEARCH"
+        android:id="@+id/ac_search1"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/ac_1"
+        android:layout_marginStart="21dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REMOVE ITEM"
+        android:id="@+id/ac_search2"
+        android:layout_marginBottom="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/ac_search1"
+        android:layout_marginEnd="18dp" />
+</RelativeLayout>

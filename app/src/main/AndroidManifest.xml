@@ -9,6 +9,33 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!-- [START fcm_default_icon] -->
+        <!--
+             Set custom default icon. This is used when no icon is set for incoming notification messages.
+             See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_stat_ic_notification" />
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <!-- [END fcm_default_icon] -->
+        <!-- [START fcm_default_channel] -->
+        <!--
+            <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id"/>
+        -->
+        <!-- [END fcm_default_channel] -->
         <activity
             android:name=".ui.activities.SplashActivity"
             android:label="@string/app_name"
@@ -25,6 +52,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".BookDescription" />
+        <activity android:name=".ChangePassword" />
+        <activity android:name=".UserDetails" />
+        <activity android:name=".ui.activities.SingleBookDisplayActivity" />
+        <activity android:name=".ui.activities.BooksDisplayActivity" />
         <activity
             android:name=".SearchResult"
             android:label="@string/app_name" />
@@ -51,9 +82,30 @@
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
+        <service android:name=".MyService" />
 
+        <activity android:name=".droidmentor.tabwithviewpager.ViewPager.CustomTabActivity" />
         <activity android:name=".ReferenceActivity" />
-        <activity android:name=".UploadBook"></activity>
+        <activity android:name=".UploadBook" />
+        <activity android:name=".UploadImageActivity" />
+        <activity android:name=".UploadCycle" />
+        <activity android:name=".UploadElectronics" />
+        <activity android:name=".gridView.DetailsGridLayout" />
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".ui.NavigationDrawer"
+            android:label="@string/title_activity_navigation_drawer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.activities.CyclesDisplayActivity" />
+        <activity android:name=".ImageViewCheck" />
+        <activity android:name=".cardView.CardViewActivity" />
+        <activity android:name=".GlobalActivity" />
+        <activity android:name=".global.GlobalChat" />
+        <activity android:name=".RemoveItem" />
+        <activity
+            android:name=".RemoveName"
+            android:label="@string/title_activity_remove_name"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

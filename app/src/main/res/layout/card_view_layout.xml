@@ -1,28 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-
-    android:layout_height="match_parent">
+    android:background="@drawable/back"
+    android:layout_height="100dp">
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:padding="20dp"
+        android:background="@drawable/back"
+        android:layout_height="100dp">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:background="@drawable/shape"
-            android:layout_height="wrap_content">
+            android:background="@drawable/cardviewborder"
+            android:layout_height="100dp">
             <ImageView
+                android:paddingLeft="10dp"
                 android:layout_width="100dp"
                 android:id="@+id/imageView"
-                android:layout_height="150dp" />
+                android:layout_height="100dp" />
             <TextView
                 android:id="@+id/description"
                 android:layout_width="wrap_content"
                 android:textStyle="bold"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:textColor="@color/blue_600"
                 android:inputType="textMultiLine"
-                android:layout_marginLeft="15dp"
-                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_height="100dp"
                 android:layout_toRightOf="@+id/imageView"
                 android:layout_marginTop="50dp"/>
+          <!--  <ImageButton android:id="@+id/favorite"
+                android:paddingLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/description"
+                android:src="@drawable/star"
+                android:background="#00ffffff"
+                android:onClick="onToggleStar"/>-->
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

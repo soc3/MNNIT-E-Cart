@@ -4,11 +4,7 @@ import android.content.Context;
 
 import com.crazyhitty.chdev.ks.firebasechat.models.Chat;
 
-/**
- * Author: Kartik Sharma
- * Created on: 9/2/2016 , 10:05 PM
- * Project: FirebaseChat
- */
+
 
 public class ChatPresenter implements ChatContract.Presenter, ChatContract.OnSendMessageListener,
         ChatContract.OnGetMessagesListener {
@@ -23,6 +19,7 @@ public class ChatPresenter implements ChatContract.Presenter, ChatContract.OnSen
     @Override
     public void sendMessage(Context context, Chat chat, String receiverFirebaseToken) {
         mChatInteractor.sendMessageToFirebaseUser(context, chat, receiverFirebaseToken);
+
     }
 
     @Override
